@@ -17,3 +17,1716 @@ Migrating to CreateVideos (20160918014943)
             FROM sqlite_temp_master
             WHERE name='index_videos_on_uid' AND type='index'
 [0m
+
+
+Started GET "/" for ::1 at 2016-09-27 12:58:39 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.0) lib/active_record/migration.rb:393:in `check_pending!'
+  activerecord (4.2.0) lib/active_record/migration.rb:374:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/Cellar/ruby/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (160.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (314.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160926231216)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "token" varchar, "uid" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_uid" ON "users" ("uid")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160926231216"]]
+  [1m[36m (8.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_uid' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_uid' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_videos_on_uid' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_videos_on_uid' AND type='index'
+
+
+
+Started GET "/" for ::1 at 2016-09-27 13:04:23 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VideosController#index as HTML
+  Rendered videos/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 86ms
+
+SyntaxError (/Users/iNjaro/Sites/Rails_Apps/yt_vidz/app/views/videos/index.html.erb:41: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/iNjaro/Sites/Rails_Apps/yt_vidz/app/views/videos/index.html.erb:43: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/videos/index.html.erb:41: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/videos/index.html.erb:43: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (101.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (183.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (333.4ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 13:05:32 -0500
+Processing by VideosController#index as HTML
+  Rendered videos/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 7ms
+
+SyntaxError (/Users/iNjaro/Sites/Rails_Apps/yt_vidz/app/views/videos/index.html.erb:42: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/iNjaro/Sites/Rails_Apps/yt_vidz/app/views/videos/index.html.erb:44: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/videos/index.html.erb:42: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/videos/index.html.erb:44: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (94.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (69.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (157.2ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 13:05:37 -0500
+Processing by VideosController#index as HTML
+  Rendered videos/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 6ms
+
+SyntaxError (/Users/iNjaro/Sites/Rails_Apps/yt_vidz/app/views/videos/index.html.erb:42: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/iNjaro/Sites/Rails_Apps/yt_vidz/app/views/videos/index.html.erb:44: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/videos/index.html.erb:42: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/videos/index.html.erb:44: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (80.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (165.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 13:06:38 -0500
+Processing by VideosController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "videos"
+  Rendered videos/index.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 10ms
+
+SyntaxError (/Users/iNjaro/Sites/Rails_Apps/yt_vidz/app/views/layouts/application.html.erb:44: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/iNjaro/Sites/Rails_Apps/yt_vidz/app/views/layouts/application.html.erb:46: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/layouts/application.html.erb:44: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/layouts/application.html.erb:46: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (62.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (139.6ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 13:07:17 -0500
+Processing by VideosController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (1.3ms)
+  [1m[35mVideo Load (0.2ms)[0m  SELECT "videos".* FROM "videos"  ORDER BY created_at DESC 
+Completed 500 Internal Server Error in 10530ms
+
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x007fc94e211bb8>:0x007fc94d2d47e0>):
+    15: 			<ul class="nav navbar-nav">
+    16: 				<li><%= link_to "Videos", root_path %></li>
+    17: 				<li><%= link_to "Add Video", new_video_path %></li>
+    18: 				<% if current_user %>
+    19: 			        <li><%= link_to 'Upload Video', new_video_upload_path %></li>
+    20: 			    <% end %>
+    21: 			</ul>
+  app/views/layouts/application.html.erb:18:in `_app_views_layouts_application_html_erb___1022222206569141421_70251279957060'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (72.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (160.5ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 13:09:50 -0500
+Processing by VideosController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 68ms (Views: 66.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/videos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-09-27 13:09:51 -0500
+
+
+Started GET "/assets/application.self-48a0184e63ed48730760dac2e6e8eab725a0980077bf8a77b5b7f8dee4e4169e.css?body=1" for ::1 at 2016-09-27 13:09:51 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-27 13:09:51 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-27 13:09:51 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-09-27 13:09:51 -0500
+
+
+Started GET "/assets/videos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-27 13:09:51 -0500
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2016-09-27 13:09:51 -0500
+
+
+Started GET "/assets/favicon-054e392aff487b02c8e7508bc12692f2d1a794cb3703ea618760e2b1cfcf498e.png" for ::1 at 2016-09-27 13:09:55 -0500
+
+ActionController::RoutingError (No route matches [GET] "/assets/favicon-054e392aff487b02c8e7508bc12692f2d1a794cb3703ea618760e2b1cfcf498e.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/Cellar/ruby/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (59.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (180.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (75.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (162.6ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-27 13:09:56 -0500
+Processing by VideosController#new as HTML
+  Rendered shared/_errors.html.erb (12.2ms)
+  Rendered videos/new.html.erb within layouts/application (50.3ms)
+Completed 200 OK in 129ms (Views: 113.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-27 13:10:11 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f5qpNzGIcTnXC6fJdUOdJc4wjLHJapt23GbaP2yZx0m2i8bv0WH1RA/A/xYirvlhMZE5TQtUI6TjoizlrPXdkg==", "video"=>{"link"=>"https://www.youtube.com/watch?v=6cXfRNdvr_s"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 1170ms
+
+Yt::Errors::RequestError (A request to YouTube API failed:
+To display more verbose errors, change the configuration of Yt with:
+
+Yt.configure do |config|
+  config.log_level = :debug
+end
+
+):
+  app/models/video_observer.rb:5:in `before_save'
+  app/controllers/videos_controller.rb:12:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (66.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (148.0ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-27 13:11:58 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f5qpNzGIcTnXC6fJdUOdJc4wjLHJapt23GbaP2yZx0m2i8bv0WH1RA/A/xYirvlhMZE5TQtUI6TjoizlrPXdkg==", "video"=>{"link"=>"https://www.youtube.com/watch?v=6cXfRNdvr_s"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 653ms
+
+Yt::Errors::RequestError (A request to YouTube API failed:
+To display more verbose errors, change the configuration of Yt with:
+
+Yt.configure do |config|
+  config.log_level = :debug
+end
+
+):
+  app/models/video_observer.rb:5:in `before_save'
+  app/controllers/videos_controller.rb:12:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (92.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (68.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (145.8ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 13:15:04 -0500
+Processing by VideosController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "videos"
+  Rendered videos/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-27 13:15:12 -0500
+Processing by VideosController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered videos/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 37ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-27 13:16:14 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PWkr+dqqrXUMyeFu3lSQfo22Cbo7rRO96Abt5D3Ijfz0eEQhOkMpCNQCubGJufQ6che8RvmTq2/Xwhs+/aSXJw==", "video"=>{"link"=>"https://www.youtube.com/watch?v=dhKDztq5_sI"}, "commit"=>"Create Video"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 125ms
+
+Yt::Errors::RequestError (A request to YouTube API failed:
+To display more verbose errors, change the configuration of Yt with:
+
+Yt.configure do |config|
+  config.log_level = :debug
+end
+
+):
+  app/models/video_observer.rb:5:in `before_save'
+  app/controllers/videos_controller.rb:12:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (57.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (140.6ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-27 13:17:12 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PWkr+dqqrXUMyeFu3lSQfo22Cbo7rRO96Abt5D3Ijfz0eEQhOkMpCNQCubGJufQ6che8RvmTq2/Xwhs+/aSXJw==", "video"=>{"link"=>"https://www.youtube.com/watch?v=dhKDztq5_sI"}, "commit"=>"Create Video"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 98ms
+
+Yt::Errors::RequestError (A request to YouTube API failed:
+To display more verbose errors, change the configuration of Yt with:
+
+Yt.configure do |config|
+  config.log_level = :debug
+end
+
+):
+  app/models/video_observer.rb:5:in `before_save'
+  app/controllers/videos_controller.rb:12:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (85.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (78.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (151.9ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-27 13:21:29 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PWkr+dqqrXUMyeFu3lSQfo22Cbo7rRO96Abt5D3Ijfz0eEQhOkMpCNQCubGJufQ6che8RvmTq2/Xwhs+/aSXJw==", "video"=>{"link"=>"https://www.youtube.com/watch?v=dhKDztq5_sI"}, "commit"=>"Create Video"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 132ms
+
+Yt::Errors::RequestError (A request to YouTube API failed:
+To display more verbose errors, change the configuration of Yt with:
+
+Yt.configure do |config|
+  config.log_level = :debug
+end
+
+):
+  app/models/video_observer.rb:5:in `before_save'
+  app/controllers/videos_controller.rb:12:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (94.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (73.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (156.8ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 14:56:02 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VideosController#index as HTML
+  [1m[35m (5.4ms)[0m  SELECT COUNT(*) FROM "videos"
+  Rendered videos/index.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 661ms (Views: 636.9ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-27 14:56:03 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-27 14:56:03 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-09-27 14:56:03 -0500
+
+
+Started GET "/assets/videos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-27 14:56:03 -0500
+
+
+Started GET "/assets/videos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-09-27 14:56:03 -0500
+
+
+Started GET "/assets/application.self-48a0184e63ed48730760dac2e6e8eab725a0980077bf8a77b5b7f8dee4e4169e.css?body=1" for ::1 at 2016-09-27 14:56:03 -0500
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2016-09-27 14:56:03 -0500
+
+
+Started GET "/videos/new" for ::1 at 2016-09-27 14:56:06 -0500
+Processing by VideosController#new as HTML
+  Rendered shared/_errors.html.erb (33.2ms)
+  Rendered videos/new.html.erb within layouts/application (332.0ms)
+Completed 200 OK in 413ms (Views: 399.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-27 14:56:18 -0500
+Processing by VideosController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered videos/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 65ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-27 14:56:21 -0500
+Processing by VideosController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered videos/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 57ms (Views: 55.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-27 14:56:28 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vg75M3WfmJ8x3vSjNMtN2wk8TOmW26IIjZ5D7OvIikd3H5brlXYc4ukVrHxjJimf9p35FVTlGtqyWrU2K6SQnA==", "video"=>{"link"=>"https://www.youtube.com/watch?v=6cXfRNdvr_s"}, "commit"=>"Create Video"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 126ms
+
+Yt::Errors::Forbidden (A request to YouTube API was considered forbidden by the server:
+{"error"=>{"errors"=>[{"domain"=>"usageLimits", "reason"=>"dailyLimitExceededUnreg", "message"=>"Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup.", "extendedHelp"=>"https://code.google.com/apis/console"}], "code"=>403, "message"=>"Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup."}}
+
+You can retry the same request manually by running:
+curl -X GET -H "content-length: 0" -H "user-agent: Yt::Request (gzip)" -H "host: www.googleapis.com" "https://www.googleapis.com/youtube/v3/videos?id=6cXfRNdvr_s&part=snippet"
+
+
+):
+  app/models/video_observer.rb:5:in `before_save'
+  app/controllers/videos_controller.rb:12:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (90.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (87.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (218.8ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 14:56:47 -0500
+Processing by VideosController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-27 14:56:49 -0500
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-27 14:56:50 -0500
+
+
+Started GET "/" for ::1 at 2016-09-27 15:02:28 -0500
+Processing by VideosController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "videos"
+  Rendered videos/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-27 15:02:30 -0500
+Processing by VideosController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered videos/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 60ms (Views: 59.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-27 15:02:35 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RoV/MDZoU3fCfgcTh/+MP2bBk7ntzL9PjfoU+OOWNpyPlBDo1oHXChq1X8zQEuh7mWAmRS/yB52yPuIiI/osRw==", "video"=>{"link"=>"https://www.youtube.com/watch?v=B6M1wIDCegU"}, "commit"=>"Create Video"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 1807ms
+
+Yt::Errors::Forbidden (A request to YouTube API was considered forbidden by the server:
+{"error"=>{"errors"=>[{"domain"=>"usageLimits", "reason"=>"dailyLimitExceededUnreg", "message"=>"Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup.", "extendedHelp"=>"https://code.google.com/apis/console"}], "code"=>403, "message"=>"Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup."}}
+
+You can retry the same request manually by running:
+curl -X GET -H "content-length: 0" -H "user-agent: Yt::Request (gzip)" -H "host: www.googleapis.com" "https://www.googleapis.com/youtube/v3/videos?id=B6M1wIDCegU&part=snippet"
+
+
+):
+  app/models/video_observer.rb:5:in `before_save'
+  app/controllers/videos_controller.rb:12:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (86.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (73.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (154.7ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-27 15:02:43 -0500
+Processing by VideosController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered videos/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-27 15:02:46 -0500
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-27 15:02:46 -0500
+
+
+Started GET "/videos/new" for ::1 at 2016-09-27 15:04:24 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VideosController#new as HTML
+  Rendered shared/_errors.html.erb (2.2ms)
+  Rendered videos/new.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 408ms (Views: 389.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-27 15:04:30 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xXHOD3kVuZHQSeac9SndfItgU+cHg9S6w0xz4pyOaocMYKHXmfw97AiCvkOixLk4dMHmG8W9bGj8iIU4XOJwXA==", "video"=>{"link"=>"https://www.youtube.com/watch?v=m_cZfV-IiAw"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 108ms
+
+Yt::Errors::Forbidden (A request to YouTube API was considered forbidden by the server:
+{"error"=>{"errors"=>[{"domain"=>"usageLimits", "reason"=>"dailyLimitExceededUnreg", "message"=>"Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup.", "extendedHelp"=>"https://code.google.com/apis/console"}], "code"=>403, "message"=>"Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup."}}
+
+You can retry the same request manually by running:
+curl -X GET -H "content-length: 0" -H "user-agent: Yt::Request (gzip)" -H "host: www.googleapis.com" "https://www.googleapis.com/youtube/v3/videos?id=m_cZfV-IiAw&part=snippet"
+
+
+):
+  app/models/video_observer.rb:5:in `before_save'
+  app/controllers/videos_controller.rb:12:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (94.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (77.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (157.1ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 15:04:37 -0500
+Processing by VideosController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "videos"
+  Rendered videos/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 65ms (Views: 61.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-27 15:04:39 -0500
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-27 15:04:40 -0500
+
+
+Started GET "/auth/google_oauth2/callback?state=47ade4daef377e25d2454927533039e2101cb0f2401f4e79&code=4/WRVZawuH6icvEH3dgh-7AhkbCR7Ih_g81q9sHzvdY8w" for ::1 at 2016-09-27 15:04:52 -0500
+
+ActionController::RoutingError (uninitialized constant SessionController):
+  activesupport (4.2.0) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.0) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.0) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.0) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.0) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:59:in `controller'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:38:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:408:in `call_app!'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:362:in `callback_phase'
+  omniauth-oauth2 (1.4.0) lib/omniauth/strategies/oauth2.rb:75:in `callback_phase'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:227:in `callback_call'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:184:in `call!'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.3.1) lib/omniauth/builder.rb:63:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/Cellar/ruby/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (66.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (463.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (66.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (153.1ms)
+
+
+Started GET "/auth/google_oauth2/callback?state=47ade4daef377e25d2454927533039e2101cb0f2401f4e79&code=4/WRVZawuH6icvEH3dgh-7AhkbCR7Ih_g81q9sHzvdY8w" for ::1 at 2016-09-27 15:06:31 -0500
+
+OAuth2::Error (invalid_grant: Invalid code.
+{
+  "error" : "invalid_grant",
+  "error_description" : "Invalid code."
+}):
+  oauth2 (1.1.0) lib/oauth2/client.rb:113:in `request'
+  oauth2 (1.1.0) lib/oauth2/client.rb:138:in `get_token'
+  oauth2 (1.1.0) lib/oauth2/strategy/auth_code.rb:29:in `get_token'
+  omniauth-google-oauth2 (0.4.0) lib/omniauth/strategies/google_oauth2.rb:107:in `custom_build_access_token'
+  omniauth-oauth2 (1.4.0) lib/omniauth/strategies/oauth2.rb:73:in `callback_phase'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:227:in `callback_call'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:184:in `call!'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.3.1) lib/omniauth/builder.rb:63:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/Cellar/ruby/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (66.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (148.6ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 15:06:52 -0500
+Processing by VideosController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-27 15:06:54 -0500
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-27 15:06:55 -0500
+
+
+Started GET "/auth/google_oauth2/callback?state=df2a2af956d15bdf95a8d2172acb403658be31a5766e1169&code=4/EnxMkV0EDumJxV0TF4CBBeza69eWJTOzlikcds8aF9E" for ::1 at 2016-09-27 15:07:01 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"df2a2af956d15bdf95a8d2172acb403658be31a5766e1169", "code"=>"4/EnxMkV0EDumJxV0TF4CBBeza69eWJTOzlikcds8aF9E", "provider"=>"google_oauth2"}
+  [1m[35mUser Load (7.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT 1  [["uid", "112531728300473454920"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "users" ("uid", "name", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["uid", "112531728300473454920"], ["name", "thunderenlight"], ["token", "ya29.Ci9rA-6SRNSFv_Kp_U-fVSA4zip1lMslwAqseCvQMcUOvJej3Ja-WjHsjzOB0NIHoA"], ["created_at", "2016-09-27 20:07:03.140953"], ["updated_at", "2016-09-27 20:07:03.140953"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 87ms (ActiveRecord: 11.8ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 15:07:03 -0500
+Processing by VideosController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "videos"
+  Rendered videos/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-27 15:07:07 -0500
+Processing by VideosController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered videos/new.html.erb within layouts/application (4.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 50ms (Views: 41.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-27 15:07:10 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/98fu2gHoFsYwnBPP3Q14Wg9joXE1mki4YzLJ57z7Ss2znBjiO4kJsAJKJBomVGll5w7eQbo0fDeSD39Xp/38A==", "video"=>{"link"=>"https://www.youtube.com/watch?v=si2stxyxQ_k"}, "commit"=>"Create Video"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 105ms
+
+Yt::Errors::Forbidden (A request to YouTube API was considered forbidden by the server:
+{"error"=>{"errors"=>[{"domain"=>"usageLimits", "reason"=>"dailyLimitExceededUnreg", "message"=>"Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup.", "extendedHelp"=>"https://code.google.com/apis/console"}], "code"=>403, "message"=>"Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup."}}
+
+You can retry the same request manually by running:
+curl -X GET -H "content-length: 0" -H "user-agent: Yt::Request (gzip)" -H "host: www.googleapis.com" "https://www.googleapis.com/youtube/v3/videos?id=si2stxyxQ_k&part=snippet"
+
+
+):
+  app/models/video_observer.rb:5:in `before_save'
+  app/controllers/videos_controller.rb:12:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (86.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (60.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (144.4ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 15:09:14 -0500
+Processing by VideosController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/video_uploads/new" for ::1 at 2016-09-27 15:09:21 -0500
+Processing by VideoUploadsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered video_uploads/new.html.erb within layouts/application (42.1ms)
+Completed 200 OK in 142ms (Views: 110.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/video_uploads" for ::1 at 2016-09-27 15:09:53 -0500
+Processing by VideoUploadsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hQYXhSRSsQY2keo7tJhn+Reor4jPBxyiZI6LmukoZOhMF3hdxLs1e+5asuTjdQO96AkadA05pHBbSn1AKUR+Mw==", "video_upload"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x007fe092121e00 @tempfile=#<Tempfile:/var/folders/l0/b40dz04d3v12g9pwz5s_yb6h0000gp/T/RackMultipart20160927-64193-ta4p0g.mp3>, @original_filename="▶_Masego_x_Medasin_Shut_Up_Groove_by_Film_Noir_gCp7J0r2Son2.128(1).mp3", @content_type="audio/mpeg", @headers="Content-Disposition: form-data; name=\"video_upload[file]\"; filename=\"\xE2\x96\xB6_Masego_x_Medasin_Shut_Up_Groove_by_Film_Noir_gCp7J0r2Son2.128(1).mp3\"\r\nContent-Type: audio/mpeg\r\n">, "title"=>"n is for neighbor", "description"=>"curl -X GET -H \"content-length: 0\" -H \"user-agent: Yt::Request (gzip)\" -H \"host: www.googleapis.com\" \"https://www.googleapis.com/youtube/v3/videos?id=si2stxyxQ_k&part=snippet\" "}, "commit"=>"Upload"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 19164ms
+
+Yt::Errors::Forbidden (A request to YouTube API was considered forbidden by the server:
+{"error"=>{"errors"=>[{"domain"=>"usageLimits", "reason"=>"dailyLimitExceededUnreg", "message"=>"Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup.", "extendedHelp"=>"https://code.google.com/apis/console"}], "code"=>403, "message"=>"Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup."}}
+
+You can retry the same request manually by running:
+curl -X GET -H "content-length: 0" -H "user-agent: Yt::Request (gzip)" -H "host: www.googleapis.com" "https://www.googleapis.com/youtube/v3/videos?id=iGLUKUn4J6c&part=snippet"
+
+
+):
+  app/models/video_observer.rb:5:in `before_save'
+  app/controllers/video_uploads_controller.rb:15:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (66.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (143.6ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 15:16:29 -0500
+Processing by VideosController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (1.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for ::1 at 2016-09-27 15:16:33 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vh5w0HOASUR5BHZcbgAxlkcIR2gZSwHN9fh/bv09F6V3Dx8Ik2nNOaHPLoM57VXSuKnylNt1uR/KPIm0PVENfg=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 15:16:33 -0500
+Processing by VideosController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-27 15:16:35 -0500
+Processing by VideosController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered videos/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 44ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-27 15:16:40 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JNAYDnbUoC6c/R6dBFqA4w67KHiGSl44IHYK5SmdGh3twXfWlj0kU0Q2RkJTt+Sn8RqdhER05uofsvw/6fEAxg==", "video"=>{"link"=>"https://www.youtube.com/watch?v=dhKDztq5_sI"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 145ms
+
+Yt::Errors::Forbidden (A request to YouTube API was considered forbidden by the server:
+{"error"=>{"errors"=>[{"domain"=>"usageLimits", "reason"=>"dailyLimitExceededUnreg", "message"=>"Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup.", "extendedHelp"=>"https://code.google.com/apis/console"}], "code"=>403, "message"=>"Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup."}}
+
+You can retry the same request manually by running:
+curl -X GET -H "content-length: 0" -H "user-agent: Yt::Request (gzip)" -H "host: www.googleapis.com" "https://www.googleapis.com/youtube/v3/videos?id=dhKDztq5_sI&part=snippet"
+
+
+):
+  app/models/video_observer.rb:5:in `before_save'
+  app/controllers/videos_controller.rb:12:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (69.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (154.6ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 15:18:15 -0500
+Processing by VideosController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "videos"
+  Rendered videos/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-27 15:18:19 -0500
+Processing by VideosController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered videos/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 50ms (Views: 40.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-27 15:18:26 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8/rC1v3/VAX744vM61t9vZZF1g/Loeo0d4j2nmuL3lE6660OHRbQeCMo0xO8thn5aeRj8wmfUuZITABEq+fEig==", "video"=>{"link"=>"https://www.youtube.com/watch?v=9cc8kKsqrwE"}, "commit"=>"Create Video"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 1141ms
+
+Yt::Errors::Forbidden (A request to YouTube API was considered forbidden by the server:
+{"error"=>{"errors"=>[{"domain"=>"usageLimits", "reason"=>"dailyLimitExceededUnreg", "message"=>"Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup.", "extendedHelp"=>"https://code.google.com/apis/console"}], "code"=>403, "message"=>"Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup."}}
+
+You can retry the same request manually by running:
+curl -X GET -H "content-length: 0" -H "user-agent: Yt::Request (gzip)" -H "host: www.googleapis.com" "https://www.googleapis.com/youtube/v3/videos?id=9cc8kKsqrwE&part=snippet"
+
+
+):
+  app/models/video_observer.rb:5:in `before_save'
+  app/controllers/videos_controller.rb:12:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (90.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (65.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (158.1ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 15:21:35 -0500
+Processing by VideosController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-27 15:21:38 -0500
+Processing by VideosController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered videos/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 38ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-27 15:22:17 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y8zZIK/eNPYrnKpjqze849I0SR3fIjqijAaMfyCD5G2q3bb4Tzewi/NX8rz82tinLZX84R0cgnCzwnql4O/+tg==", "video"=>{"link"=>"https://www.youtube.com/watch?v=dhKDztq5_sI"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 114ms
+
+Yt::Errors::Forbidden (A request to YouTube API was considered forbidden by the server:
+{"error"=>{"errors"=>[{"domain"=>"usageLimits", "reason"=>"dailyLimitExceededUnreg", "message"=>"Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup.", "extendedHelp"=>"https://code.google.com/apis/console"}], "code"=>403, "message"=>"Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup."}}
+
+You can retry the same request manually by running:
+curl -X GET -H "content-length: 0" -H "user-agent: Yt::Request (gzip)" -H "host: www.googleapis.com" "https://www.googleapis.com/youtube/v3/videos?id=dhKDztq5_sI&part=snippet"
+
+
+):
+  app/models/video_observer.rb:5:in `before_save'
+  app/controllers/videos_controller.rb:12:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (19.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (97.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (72.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (149.4ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 15:25:16 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VideosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "videos"
+  Rendered videos/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 596ms (Views: 583.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-27 15:25:19 -0500
+Processing by VideosController#new as HTML
+  Rendered shared/_errors.html.erb (2.6ms)
+  Rendered videos/new.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 85ms (Views: 75.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-27 15:25:25 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OLcL98hjMBkbToiwTvrxKj3X/RpDJZg8yC3+CqNF5eDxpmQvKIq0ZMOF0G8ZF5VuwnZI5oEbIO736QjQYyn/Ow==", "video"=>{"link"=>"https://www.youtube.com/watch?v=dhKDztq5_sI"}, "commit"=>"Create Video"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 166ms
+
+Yt::Errors::Forbidden (A request to YouTube API was considered forbidden by the server:
+{"error"=>{"errors"=>[{"domain"=>"usageLimits", "reason"=>"ipRefererBlocked", "message"=>"The request did not specify any referer. Please ensure that the client is sending referer or use the API Console to remove the referer restrictions.", "extendedHelp"=>"https://console.developers.google.com/apis/credentials?project=952285415540"}], "code"=>403, "message"=>"The request did not specify any referer. Please ensure that the client is sending referer or use the API Console to remove the referer restrictions."}}
+
+You can retry the same request manually by running:
+curl -X GET -H "content-length: 0" -H "user-agent: Yt::Request (gzip)" -H "host: www.googleapis.com" "https://www.googleapis.com/youtube/v3/videos?id=dhKDztq5_sI&key=AIzaSyBJsviSQlZRn5059PLtEw8FIJFW2FsbvuU&part=snippet"
+
+
+):
+  app/models/video_observer.rb:5:in `before_save'
+  app/controllers/videos_controller.rb:12:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (75.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (172.2ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 15:27:50 -0500
+Processing by VideosController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-27 15:27:52 -0500
+Processing by VideosController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered videos/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 71ms (Views: 57.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-27 15:27:55 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/AaSTribpe7Zd532B3yDWfsZ2YfeD/Pscjls6Xeknd01F/2WWHIhkwG8xSlQkecdBLhsexwxSz5N/Zozt8iHBg==", "video"=>{"link"=>"https://www.youtube.com/watch?v=dhKDztq5_sI"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 142ms
+
+Yt::Errors::Forbidden (A request to YouTube API was considered forbidden by the server:
+{"error"=>{"errors"=>[{"domain"=>"usageLimits", "reason"=>"ipRefererBlocked", "message"=>"The request did not specify any referer. Please ensure that the client is sending referer or use the API Console to remove the referer restrictions.", "extendedHelp"=>"https://console.developers.google.com/apis/credentials?project=952285415540"}], "code"=>403, "message"=>"The request did not specify any referer. Please ensure that the client is sending referer or use the API Console to remove the referer restrictions."}}
+
+You can retry the same request manually by running:
+curl -X GET -H "content-length: 0" -H "user-agent: Yt::Request (gzip)" -H "host: www.googleapis.com" "https://www.googleapis.com/youtube/v3/videos?id=dhKDztq5_sI&key=AIzaSyBJsviSQlZRn5059PLtEw8FIJFW2FsbvuU&part=snippet"
+
+
+):
+  app/models/video_observer.rb:7:in `before_save'
+  app/controllers/videos_controller.rb:12:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (89.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (72.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (159.3ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 15:27:59 -0500
+Processing by VideosController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "videos"
+  Rendered videos/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-27 15:28:01 -0500
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-27 15:28:01 -0500
+
+
+Started GET "/auth/google_oauth2/callback?state=1a2823b42e43c5e717a69a04cd7f81b25606d1267d53cf7c&code=4/KRPdJigu1T8HDx0xj7VaFWatIWJxL1gIkMhd-vvQQQg" for ::1 at 2016-09-27 15:28:05 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"1a2823b42e43c5e717a69a04cd7f81b25606d1267d53cf7c", "code"=>"4/KRPdJigu1T8HDx0xj7VaFWatIWJxL1gIkMhd-vvQQQg", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT 1[0m  [["uid", "112531728300473454920"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "ya29.Ci9rAyiaiBFrQCanL2_MBiX5stxDsjMTA-yK58OoC-t-qBZErLaRBqPJamWHE12Ddg"], ["updated_at", "2016-09-27 20:28:05.988383"], ["id", 1]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 37ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 15:28:06 -0500
+Processing by VideosController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (1.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-27 15:28:09 -0500
+Processing by VideosController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered videos/new.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-27 15:28:13 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hqNiQMUMJo9HcfyvP5R/9kuW2qBnnNjqGS1JKJ2u2NJPsg2YJeWi8p+6pHBoeRuytDdvXKWiYDgm6b/yXcLCCQ==", "video"=>{"link"=>"https://www.youtube.com/watch?v=B6M1wIDCegU"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 104ms
+
+Yt::Errors::Forbidden (A request to YouTube API was considered forbidden by the server:
+{"error"=>{"errors"=>[{"domain"=>"usageLimits", "reason"=>"ipRefererBlocked", "message"=>"The request did not specify any referer. Please ensure that the client is sending referer or use the API Console to remove the referer restrictions.", "extendedHelp"=>"https://console.developers.google.com/apis/credentials?project=952285415540"}], "code"=>403, "message"=>"The request did not specify any referer. Please ensure that the client is sending referer or use the API Console to remove the referer restrictions."}}
+
+You can retry the same request manually by running:
+curl -X GET -H "content-length: 0" -H "user-agent: Yt::Request (gzip)" -H "host: www.googleapis.com" "https://www.googleapis.com/youtube/v3/videos?id=B6M1wIDCegU&key=AIzaSyBJsviSQlZRn5059PLtEw8FIJFW2FsbvuU&part=snippet"
+
+
+):
+  app/models/video_observer.rb:7:in `before_save'
+  app/controllers/videos_controller.rb:12:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (62.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (143.8ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 15:30:01 -0500
+Processing by VideosController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "videos"
+  Rendered videos/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-27 15:30:03 -0500
+Processing by VideosController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered videos/new.html.erb within layouts/application (8.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-27 15:30:06 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p8we9hDVlO8OrlvDcR5mD2X/Ekm6n8NtFP2Xxi31IXpu3XEu8DwQktZlAxwm8wJLml6ntXihe78rOWEc7Zk7oQ==", "video"=>{"link"=>"https://www.youtube.com/watch?v=B6M1wIDCegU"}, "commit"=>"Create Video"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 110ms
+
+Yt::Errors::Forbidden (A request to YouTube API was considered forbidden by the server:
+{"error"=>{"errors"=>[{"domain"=>"usageLimits", "reason"=>"ipRefererBlocked", "message"=>"The request did not specify any referer. Please ensure that the client is sending referer or use the API Console to remove the referer restrictions.", "extendedHelp"=>"https://console.developers.google.com/apis/credentials?project=952285415540"}], "code"=>403, "message"=>"The request did not specify any referer. Please ensure that the client is sending referer or use the API Console to remove the referer restrictions."}}
+
+You can retry the same request manually by running:
+curl -X GET -H "content-length: 0" -H "user-agent: Yt::Request (gzip)" -H "host: www.googleapis.com" "https://www.googleapis.com/youtube/v3/videos?id=B6M1wIDCegU&key=AIzaSyBJsviSQlZRn5059PLtEw8FIJFW2FsbvuU&part=snippet"
+
+
+):
+  app/models/video_observer.rb:7:in `before_save'
+  app/controllers/videos_controller.rb:12:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (65.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (144.8ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 15:30:33 -0500
+Processing by VideosController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (1.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-27 15:30:37 -0500
+Processing by VideosController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered videos/new.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 46ms (Views: 45.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-27 15:30:40 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5IkAtCmScq62MSPZOk6pR6e0vnj8yiPH/erEhGHPWe4tmG9syXv20276ewZto80DWBULhD70mxXCLjJeoaNDNQ==", "video"=>{"link"=>"https://www.youtube.com/watch?v=6cXfRNdvr_s"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "videos" ("link", "uid", "title", "likes", "dislikes", "published_at", "comment_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["link", "https://www.youtube.com/watch?v=6cXfRNdvr_s"], ["uid", "6cXfRNdvr_s"], ["title", "Real Reason No Third Parties at Presidential Debates"], ["likes", 1171], ["dislikes", 12], ["published_at", "2016-09-26 20:10:18.000000"], ["comment_count", 351], ["created_at", "2016-09-27 20:30:40.889990"], ["updated_at", "2016-09-27 20:30:40.889990"]]
+  [1m[35m (11.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 320ms (ActiveRecord: 12.3ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 15:30:40 -0500
+Processing by VideosController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "videos"[0m
+  [1m[35mVideo Load (0.2ms)[0m  SELECT "videos".* FROM "videos"  ORDER BY created_at DESC 
+  Rendered videos/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-27 15:31:58 -0500
+Processing by VideosController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered videos/new.html.erb within layouts/application (3.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-27 15:32:02 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"APbB2//MMLQ21YzdYKJ/4oyExEgAdkm7XylvpaWcsnjJ564DHyW0ye4e1AI3TxumcyVxtMJI8Wlg7Zl/ZfCoow==", "video"=>{"link"=>"https://www.youtube.com/watch?v=si2stxyxQ_k"}, "commit"=>"Create Video"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 130ms
+
+Yt::Errors::Forbidden (A request to YouTube API was considered forbidden by the server:
+{"error"=>{"errors"=>[{"domain"=>"usageLimits", "reason"=>"ipRefererBlocked", "message"=>"The request did not specify any referer. Please ensure that the client is sending referer or use the API Console to remove the referer restrictions.", "extendedHelp"=>"https://console.developers.google.com/apis/credentials?project=952285415540"}], "code"=>403, "message"=>"The request did not specify any referer. Please ensure that the client is sending referer or use the API Console to remove the referer restrictions."}}
+
+You can retry the same request manually by running:
+curl -X GET -H "content-length: 0" -H "user-agent: Yt::Request (gzip)" -H "host: www.googleapis.com" "https://www.googleapis.com/youtube/v3/videos?id=si2stxyxQ_k&key=AIzaSyBJsviSQlZRn5059PLtEw8FIJFW2FsbvuU&part=snippet"
+
+
+):
+  app/models/video_observer.rb:7:in `before_save'
+  app/controllers/videos_controller.rb:12:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (79.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (68.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (146.1ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-27 15:32:17 -0500
+Processing by VideosController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered videos/new.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-27 15:32:27 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zV3bUlhgEzHjF5W04di3mft97ZKfOBY/jJ+k6BvENxQETLSKuImXTDvczWu2NdPdBNxYbl0Gru2zW1Iy26gtzw==", "video"=>{"link"=>"https://www.youtube.com/watch?v=dhKDztq5_sI"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 161ms
+
+Yt::Errors::Forbidden (A request to YouTube API was considered forbidden by the server:
+{"error"=>{"errors"=>[{"domain"=>"usageLimits", "reason"=>"ipRefererBlocked", "message"=>"The request did not specify any referer. Please ensure that the client is sending referer or use the API Console to remove the referer restrictions.", "extendedHelp"=>"https://console.developers.google.com/apis/credentials?project=952285415540"}], "code"=>403, "message"=>"The request did not specify any referer. Please ensure that the client is sending referer or use the API Console to remove the referer restrictions."}}
+
+You can retry the same request manually by running:
+curl -X GET -H "content-length: 0" -H "user-agent: Yt::Request (gzip)" -H "host: www.googleapis.com" "https://www.googleapis.com/youtube/v3/videos?id=dhKDztq5_sI&key=AIzaSyBJsviSQlZRn5059PLtEw8FIJFW2FsbvuU&part=snippet"
+
+
+):
+  app/models/video_observer.rb:7:in `before_save'
+  app/controllers/videos_controller.rb:12:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (85.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (73.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (156.7ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 15:32:41 -0500
+Processing by VideosController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "videos"
+  [1m[36mVideo Load (0.2ms)[0m  [1mSELECT "videos".* FROM "videos"  ORDER BY created_at DESC [0m
+  Rendered videos/index.html.erb within layouts/application (2.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-27 15:32:46 -0500
+Processing by VideosController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered videos/new.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-27 15:33:13 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qt11EIq6MzCdj0JTfzsJW21cgjawHD7uaIvv/YTIxeFjzBrIalO3TUVEGowo1m0fkv03ynIihjxXTxknRKTfOg==", "video"=>{"link"=>"https://www.youtube.com/watch?v=B6M1wIDCegU"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "videos" ("link", "uid", "title", "likes", "dislikes", "published_at", "comment_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["link", "https://www.youtube.com/watch?v=B6M1wIDCegU"], ["uid", "B6M1wIDCegU"], ["title", "Is Bernie’s ‘Our Revolution’ A Complete Sellout?"], ["likes", 446], ["dislikes", 19], ["published_at", "2016-09-11 12:00:00.000000"], ["comment_count", 158], ["created_at", "2016-09-27 20:33:13.819207"], ["updated_at", "2016-09-27 20:33:13.819207"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 285ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 15:33:13 -0500
+Processing by VideosController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "videos"[0m
+  [1m[35mVideo Load (0.2ms)[0m  SELECT "videos".* FROM "videos"  ORDER BY created_at DESC 
+  Rendered videos/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-27 15:33:18 -0500
+Processing by VideosController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered videos/new.html.erb within layouts/application (3.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-27 15:33:22 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FCgXiOj8bg0bb8Eh48le9YYhyFvd6plDHOe0yd3NcPjdOXhQCBXqcMOkmf60JDqxeYB9px/UIZEjI0ITHaFqIw==", "video"=>{"link"=>"https://www.youtube.com/watch?v=m_cZfV-IiAw"}, "commit"=>"Create Video"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "videos" ("link", "uid", "title", "likes", "dislikes", "published_at", "comment_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["link", "https://www.youtube.com/watch?v=m_cZfV-IiAw"], ["uid", "m_cZfV-IiAw"], ["title", "#NoDAPL Activists Denounce Corporate Media Blackout"], ["likes", 300], ["dislikes", 1], ["published_at", "2016-09-08 21:11:12.000000"], ["comment_count", 67], ["created_at", "2016-09-27 20:33:22.739638"], ["updated_at", "2016-09-27 20:33:22.739638"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 296ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 15:33:22 -0500
+Processing by VideosController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "videos"
+  [1m[36mVideo Load (0.3ms)[0m  [1mSELECT "videos".* FROM "videos"  ORDER BY created_at DESC [0m
+  Rendered videos/index.html.erb within layouts/application (3.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 15:33:55 -0500
+Processing by VideosController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "videos"[0m
+  [1m[35mVideo Load (0.2ms)[0m  SELECT "videos".* FROM "videos"  ORDER BY created_at DESC 
+  Rendered videos/index.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/videos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-09-27 15:33:56 -0500
+
+
+Started GET "/assets/application.self-48a0184e63ed48730760dac2e6e8eab725a0980077bf8a77b5b7f8dee4e4169e.css?body=1" for ::1 at 2016-09-27 15:33:56 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-27 15:33:56 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-27 15:33:56 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-09-27 15:33:56 -0500
+
+
+Started GET "/assets/videos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-27 15:33:56 -0500
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2016-09-27 15:33:56 -0500
+
+
+Started GET "/videos/new" for ::1 at 2016-09-27 15:34:11 -0500
+Processing by VideosController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered videos/new.html.erb within layouts/application (3.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-27 15:34:16 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eB8Pah5Ll/y+xhjdIy9kgVbkDisBH5GuRf6o+5WCSvGxDmCy/qITgWYNQAJ0wgDFqUW718MhKXx6Ol4hVe5QKg==", "video"=>{"link"=>"https://www.youtube.com/watch?v=6cXfRNdvr_s"}, "commit"=>"Create Video"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "videos" ("link", "uid", "title", "likes", "dislikes", "published_at", "comment_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["link", "https://www.youtube.com/watch?v=6cXfRNdvr_s"], ["uid", "6cXfRNdvr_s"], ["title", "Real Reason No Third Parties at Presidential Debates"], ["likes", 1172], ["dislikes", 12], ["published_at", "2016-09-26 20:10:18.000000"], ["comment_count", 352], ["created_at", "2016-09-27 20:34:17.110725"], ["updated_at", "2016-09-27 20:34:17.110725"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 284ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2016-09-27 15:34:17 -0500
+Processing by VideosController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "videos"
+  [1m[36mVideo Load (0.2ms)[0m  [1mSELECT "videos".* FROM "videos"  ORDER BY created_at DESC [0m
+  Rendered videos/index.html.erb within layouts/application (2.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/video_uploads/new" for ::1 at 2016-09-29 18:24:30 -0500
+Processing by VideoUploadsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_errors.html.erb (0.3ms)
+  Rendered video_uploads/new.html.erb within layouts/application (118.1ms)
+Completed 200 OK in 378ms (Views: 338.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/video_uploads" for ::1 at 2016-09-29 18:26:59 -0500
+Processing by VideoUploadsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0+8A/AmBiZGDa10WjDo7wno68NReXOizvh1SUcqyrusa/m8k6WgN7FugBcnb11+GhZtFKJxiUGGB2aSLCt60MA==", "video_upload"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x007fc146d892f8 @tempfile=#<Tempfile:/var/folders/l0/b40dz04d3v12g9pwz5s_yb6h0000gp/T/RackMultipart20160929-64738-pui649.mp3>, @original_filename="▶_Everyday_by_k_u_n_Wu6guP87HqWi.128.mp3", @content_type="audio/mpeg", @headers="Content-Disposition: form-data; name=\"video_upload[file]\"; filename=\"\xE2\x96\xB6_Everyday_by_k_u_n_Wu6guP87HqWi.128.mp3\"\r\nContent-Type: audio/mpeg\r\n">, "title"=>"everyday music", "description"=>"a song to work with"}, "commit"=>"Upload"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 612ms
+
+Yt::Errors::Unauthorized (A request to YouTube API was sent without a valid authentication:
+{"error"=>{"errors"=>[{"domain"=>"global", "reason"=>"authError", "message"=>"Invalid Credentials", "locationType"=>"header", "location"=>"Authorization"}], "code"=>401, "message"=>"Invalid Credentials"}}
+
+You can retry the same request manually by running:
+curl -X POST -H "content-type: application/json" -H "x-upload-content-length: 2572537" -H "x-upload-content-type: video/*" -H "user-agent: Yt::Request (gzip)" -H "authorization: Bearer ya29.Ci9rAyiaiBFrQCanL2_MBiX5stxDsjMTA-yK58OoC-t-qBZErLaRBqPJamWHE12Ddg" -H "host: www.googleapis.com" -H "content-length: 74" -d '{"snippet":{"title":"everyday music","description":"a song to work with"}}' "https://www.googleapis.com/upload/youtube/v3/videos?key=AIzaSyBJsviSQlZRn5059PLtEw8FIJFW2FsbvuU&part=snippet%2Cstatus&uploadType=resumable"
+
+
+):
+  app/models/video_upload.rb:11:in `upload!'
+  app/controllers/video_uploads_controller.rb:11:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (97.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (226.9ms)
+
+
+Started GET "/" for ::1 at 2016-09-29 18:29:41 -0500
+Processing by VideosController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "videos"[0m
+  [1m[35mVideo Load (0.5ms)[0m  SELECT "videos".* FROM "videos"  ORDER BY created_at DESC 
+  Rendered videos/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 101ms (Views: 99.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fc969dc1c6ff531abcf368089dcbaf5775133b0626ff56b52301a059fc0f9e1e.woff" for ::1 at 2016-09-29 18:29:42 -0500
+
+
+Started GET "/videos/new" for ::1 at 2016-09-29 18:29:46 -0500
+Processing by VideosController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered videos/new.html.erb within layouts/application (3.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-29 18:29:50 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nqFPZuOsKmJsutjRdroZ1RZFACDZuxiS/VU5zXlDfE1XsCC+A0WuH7RxgA4hV32R6eS13BuFoEDCkc8XuS9mlg==", "video"=>{"link"=>"https://www.youtube.com/watch?v=m_cZfV-IiAw"}, "commit"=>"Create Video"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "videos" ("link", "uid", "title", "likes", "dislikes", "published_at", "comment_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["link", "https://www.youtube.com/watch?v=m_cZfV-IiAw"], ["uid", "m_cZfV-IiAw"], ["title", "#NoDAPL Activists Denounce Corporate Media Blackout"], ["likes", 301], ["dislikes", 1], ["published_at", "2016-09-08 21:11:12.000000"], ["comment_count", 67], ["created_at", "2016-09-29 23:29:51.103675"], ["updated_at", "2016-09-29 23:29:51.103675"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 364ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2016-09-29 18:29:51 -0500
+Processing by VideosController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "videos"
+  [1m[36mVideo Load (0.2ms)[0m  [1mSELECT "videos".* FROM "videos"  ORDER BY created_at DESC [0m
+  Rendered videos/index.html.erb within layouts/application (3.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-29 18:30:42 -0500
+Processing by VideosController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered videos/new.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 51ms (Views: 50.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/video_uploads/new" for ::1 at 2016-09-29 18:30:45 -0500
+Processing by VideoUploadsController#new as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered video_uploads/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 54ms (Views: 52.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/video_uploads/new" for ::1 at 2016-09-29 18:49:50 -0500
+Processing by VideoUploadsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered video_uploads/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 98ms (Views: 97.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/videos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-09-29 18:49:50 -0500
+
+
+Started GET "/assets/application.self-48a0184e63ed48730760dac2e6e8eab725a0980077bf8a77b5b7f8dee4e4169e.css?body=1" for ::1 at 2016-09-29 18:49:50 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-29 18:49:50 -0500
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2016-09-29 18:49:50 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-09-29 18:49:50 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-29 18:49:50 -0500
+
+
+Started GET "/assets/videos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-29 18:49:50 -0500

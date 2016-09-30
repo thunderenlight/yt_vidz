@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160918014943) do
+ActiveRecord::Schema.define(version: 20160926231216) do
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "token"
+    t.string   "uid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "users", ["uid"], name: "index_users_on_uid", unique: true
 
   create_table "videos", force: :cascade do |t|
     t.string   "link"
